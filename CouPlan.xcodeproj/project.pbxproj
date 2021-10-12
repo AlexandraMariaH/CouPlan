@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DF9590F6AE0DCB6B5D3B09B /* Pods_CouPlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FD5193EAD2DD4BC13FAD38 /* Pods_CouPlan.framework */; };
 		E004639726F5E93000422560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E004639626F5E93000422560 /* AppDelegate.swift */; };
 		E004639926F5E93000422560 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E004639826F5E93000422560 /* SceneDelegate.swift */; };
 		E004639B26F5E93000422560 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E004639A26F5E93000422560 /* SettingsViewController.swift */; };
@@ -25,8 +26,23 @@
 		E03AF2952701BC4300DB88AE /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03AF2942701BC4300DB88AE /* Cell.swift */; };
 		E03AF2972701BC7E00DB88AE /* ShoppinglistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03AF2962701BC7E00DB88AE /* ShoppinglistCell.swift */; };
 		E03AF2992701BC8A00DB88AE /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03AF2982701BC8A00DB88AE /* ItemCell.swift */; };
+		E06F187F270A40E900008CF9 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06F187E270A40E900008CF9 /* TextField.swift */; };
+		E06F1882270B32DB00008CF9 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06F1881270B32DB00008CF9 /* Button.swift */; };
+		E06F1884270CBF4E00008CF9 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06F1883270CBF4E00008CF9 /* NavBar.swift */; };
+		E06F1886270CC0F700008CF9 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06F1885270CC0F700008CF9 /* Background.swift */; };
+		E06F1888270CC2DA00008CF9 /* BarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06F1887270CC2DA00008CF9 /* BarButton.swift */; };
+		E06F188A270E307400008CF9 /* ToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06F1889270E307400008CF9 /* ToolBar.swift */; };
+		E080D727270EF4760066A527 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E080D726270EF4760066A527 /* SignUpViewController.swift */; };
 		E0B8C6C327010DC200A35C43 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8C6C227010DC200A35C43 /* DataController.swift */; };
 		E0B8C6C627010F2A00A35C43 /* CouPlan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0B8C6C427010F2A00A35C43 /* CouPlan.xcdatamodeld */; };
+		E0D0EFFB2711D01C000DFF50 /* RecipeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D0EFFA2711D01C000DFF50 /* RecipeImage.swift */; };
+		E0D0EFFD271499E1000DFF50 /* OneRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D0EFFC271499E1000DFF50 /* OneRecipeViewController.swift */; };
+		E0DB230C27108F3100A8F95B /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DB230B27108F3100A8F95B /* RecipesViewController.swift */; };
+		E0DB230E2710939900A8F95B /* RecipesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DB230D2710939900A8F95B /* RecipesCell.swift */; };
+		E0DB23102710EB3F00A8F95B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DB230F2710EB3F00A8F95B /* API.swift */; };
+		E0DB23142710EB8A00A8F95B /* RecipeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DB23132710EB8A00A8F95B /* RecipeResponse.swift */; };
+		E0FA871927075332003BC154 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FA871827075332003BC154 /* LoginViewController.swift */; };
+		E0FA871C2709DAC7003BC154 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0FA871B2709DAC7003BC154 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +63,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4DD6A4C1FFE7BAE80492DB4C /* Pods-CouPlan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CouPlan.release.xcconfig"; path = "Target Support Files/Pods-CouPlan/Pods-CouPlan.release.xcconfig"; sourceTree = "<group>"; };
+		53FD5193EAD2DD4BC13FAD38 /* Pods_CouPlan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CouPlan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7153019968B5A26FAD7ACF91 /* Pods-CouPlan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CouPlan.debug.xcconfig"; path = "Target Support Files/Pods-CouPlan/Pods-CouPlan.debug.xcconfig"; sourceTree = "<group>"; };
 		E004639326F5E93000422560 /* CouPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CouPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E004639626F5E93000422560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E004639826F5E93000422560 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,8 +90,23 @@
 		E03AF2942701BC4300DB88AE /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		E03AF2962701BC7E00DB88AE /* ShoppinglistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppinglistCell.swift; sourceTree = "<group>"; };
 		E03AF2982701BC8A00DB88AE /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		E06F187E270A40E900008CF9 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		E06F1881270B32DB00008CF9 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		E06F1883270CBF4E00008CF9 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		E06F1885270CC0F700008CF9 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		E06F1887270CC2DA00008CF9 /* BarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButton.swift; sourceTree = "<group>"; };
+		E06F1889270E307400008CF9 /* ToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBar.swift; sourceTree = "<group>"; };
+		E080D726270EF4760066A527 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E0B8C6C227010DC200A35C43 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		E0B8C6C527010F2A00A35C43 /* CouPlan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CouPlan.xcdatamodel; sourceTree = "<group>"; };
+		E0D0EFFA2711D01C000DFF50 /* RecipeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeImage.swift; sourceTree = "<group>"; };
+		E0D0EFFC271499E1000DFF50 /* OneRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneRecipeViewController.swift; sourceTree = "<group>"; };
+		E0DB230B27108F3100A8F95B /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
+		E0DB230D2710939900A8F95B /* RecipesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesCell.swift; sourceTree = "<group>"; };
+		E0DB230F2710EB3F00A8F95B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		E0DB23132710EB8A00A8F95B /* RecipeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResponse.swift; sourceTree = "<group>"; };
+		E0FA871827075332003BC154 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E0FA871B2709DAC7003BC154 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DF9590F6AE0DCB6B5D3B09B /* Pods_CouPlan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +135,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26FD68B27E301F6A1CB8D811 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7153019968B5A26FAD7ACF91 /* Pods-CouPlan.debug.xcconfig */,
+				4DD6A4C1FFE7BAE80492DB4C /* Pods-CouPlan.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		638489BCFA3A5819DE2CD221 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53FD5193EAD2DD4BC13FAD38 /* Pods_CouPlan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E004638A26F5E92F00422560 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +159,8 @@
 				E00463AC26F5E93400422560 /* CouPlanTests */,
 				E00463B726F5E93400422560 /* CouPlanUITests */,
 				E004639426F5E93000422560 /* Products */,
+				26FD68B27E301F6A1CB8D811 /* Pods */,
+				638489BCFA3A5819DE2CD221 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +177,7 @@
 		E004639526F5E93000422560 /* CouPlan */ = {
 			isa = PBXGroup;
 			children = (
+				E0FA871A2709DAB3003BC154 /* Supporting Files */,
 				E03AF2912701BC1800DB88AE /* Views */,
 				E03AF28E2701B72F00DB88AE /* View Controllers */,
 				E0B8C6C127010DA600A35C43 /* Model */,
@@ -170,6 +225,10 @@
 				E00463C626F8EF5200422560 /* OverviewViewController.swift */,
 				E00463CA26FF1E5C00422560 /* ShoppingListViewController.swift */,
 				E03AF28F2701B76500DB88AE /* ItemsListViewController.swift */,
+				E0FA871827075332003BC154 /* LoginViewController.swift */,
+				E080D726270EF4760066A527 /* SignUpViewController.swift */,
+				E0DB230B27108F3100A8F95B /* RecipesViewController.swift */,
+				E0D0EFFC271499E1000DFF50 /* OneRecipeViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -177,6 +236,7 @@
 		E03AF2912701BC1800DB88AE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E06F1880270B32B900008CF9 /* Design */,
 				E03AF2932701BC2800DB88AE /* Protocols */,
 				E03AF2922701BC1F00DB88AE /* Cells */,
 			);
@@ -188,6 +248,7 @@
 			children = (
 				E03AF2962701BC7E00DB88AE /* ShoppinglistCell.swift */,
 				E03AF2982701BC8A00DB88AE /* ItemCell.swift */,
+				E0DB230D2710939900A8F95B /* RecipesCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -200,16 +261,56 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		E06F1880270B32B900008CF9 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				E06F187E270A40E900008CF9 /* TextField.swift */,
+				E06F1881270B32DB00008CF9 /* Button.swift */,
+				E06F1883270CBF4E00008CF9 /* NavBar.swift */,
+				E06F1885270CC0F700008CF9 /* Background.swift */,
+				E06F1887270CC2DA00008CF9 /* BarButton.swift */,
+				E06F1889270E307400008CF9 /* ToolBar.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
 		E0B8C6C127010DA600A35C43 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E0DB23122710EB6900A8F95B /* Responses */,
+				E0DB23112710EB4800A8F95B /* API */,
 				E01899AA2701F7CA00029DBA /* Managed Object Extensions */,
 				E0B8C6C227010DC200A35C43 /* DataController.swift */,
 				E01899B12701FA6300029DBA /* UpdateToAttributedStringsPolicy.swift */,
 				E01899B32701FA6E00029DBA /* Pathifier.swift */,
 				E0B8C6C427010F2A00A35C43 /* CouPlan.xcdatamodeld */,
+				E0D0EFFA2711D01C000DFF50 /* RecipeImage.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E0DB23112710EB4800A8F95B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E0DB230F2710EB3F00A8F95B /* API.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E0DB23122710EB6900A8F95B /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				E0DB23132710EB8A00A8F95B /* RecipeResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		E0FA871A2709DAB3003BC154 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E0FA871B2709DAC7003BC154 /* GoogleService-Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +320,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E00463BD26F5E93400422560 /* Build configuration list for PBXNativeTarget "CouPlan" */;
 			buildPhases = (
+				371014AF8DC143FCD0E63EB2 /* [CP] Check Pods Manifest.lock */,
 				E004638F26F5E93000422560 /* Sources */,
 				E004639026F5E93000422560 /* Frameworks */,
 				E004639126F5E93000422560 /* Resources */,
+				C80602613A6F80E7C63D9DB7 /* [CP] Embed Pods Frameworks */,
+				FB888DF26CD71CE2867A7C05 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -315,6 +419,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0FA871C2709DAC7003BC154 /* GoogleService-Info.plist in Resources */,
 				E00463A326F5E93300422560 /* LaunchScreen.storyboard in Resources */,
 				E00463A026F5E93300422560 /* Assets.xcassets in Resources */,
 				E004639E26F5E93000422560 /* Main.storyboard in Resources */,
@@ -337,6 +442,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		371014AF8DC143FCD0E63EB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CouPlan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C80602613A6F80E7C63D9DB7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CouPlan/Pods-CouPlan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CouPlan/Pods-CouPlan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CouPlan/Pods-CouPlan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB888DF26CD71CE2867A7C05 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CouPlan/Pods-CouPlan-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CouPlan/Pods-CouPlan-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CouPlan/Pods-CouPlan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E004638F26F5E93000422560 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -344,19 +508,33 @@
 			files = (
 				E01899B22701FA6300029DBA /* UpdateToAttributedStringsPolicy.swift in Sources */,
 				E004639B26F5E93000422560 /* SettingsViewController.swift in Sources */,
+				E06F1884270CBF4E00008CF9 /* NavBar.swift in Sources */,
+				E0DB230E2710939900A8F95B /* RecipesCell.swift in Sources */,
 				E0B8C6C327010DC200A35C43 /* DataController.swift in Sources */,
+				E06F187F270A40E900008CF9 /* TextField.swift in Sources */,
+				E0DB23102710EB3F00A8F95B /* API.swift in Sources */,
+				E0DB23142710EB8A00A8F95B /* RecipeResponse.swift in Sources */,
 				E00463CB26FF1E5C00422560 /* ShoppingListViewController.swift in Sources */,
+				E080D727270EF4760066A527 /* SignUpViewController.swift in Sources */,
 				E01899AC2701F7F800029DBA /* Shoppinglist+Extensions.swift in Sources */,
 				E03AF2992701BC8A00DB88AE /* ItemCell.swift in Sources */,
+				E06F1882270B32DB00008CF9 /* Button.swift in Sources */,
 				E00463C726F8EF5200422560 /* OverviewViewController.swift in Sources */,
 				E004639726F5E93000422560 /* AppDelegate.swift in Sources */,
 				E03AF2972701BC7E00DB88AE /* ShoppinglistCell.swift in Sources */,
 				E03AF2952701BC4300DB88AE /* Cell.swift in Sources */,
 				E03AF2902701B76600DB88AE /* ItemsListViewController.swift in Sources */,
 				E004639926F5E93000422560 /* SceneDelegate.swift in Sources */,
+				E0D0EFFB2711D01C000DFF50 /* RecipeImage.swift in Sources */,
+				E0DB230C27108F3100A8F95B /* RecipesViewController.swift in Sources */,
+				E06F1888270CC2DA00008CF9 /* BarButton.swift in Sources */,
+				E0FA871927075332003BC154 /* LoginViewController.swift in Sources */,
 				E01899AE2701F80A00029DBA /* Item+Extensions.swift in Sources */,
 				E0B8C6C627010F2A00A35C43 /* CouPlan.xcdatamodeld in Sources */,
 				E01899B42701FA6E00029DBA /* Pathifier.swift in Sources */,
+				E0D0EFFD271499E1000DFF50 /* OneRecipeViewController.swift in Sources */,
+				E06F1886270CC0F700008CF9 /* Background.swift in Sources */,
+				E06F188A270E307400008CF9 /* ToolBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +707,7 @@
 		};
 		E00463BE26F5E93400422560 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7153019968B5A26FAD7ACF91 /* Pods-CouPlan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -548,6 +727,7 @@
 		};
 		E00463BF26F5E93400422560 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DD6A4C1FFE7BAE80492DB4C /* Pods-CouPlan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

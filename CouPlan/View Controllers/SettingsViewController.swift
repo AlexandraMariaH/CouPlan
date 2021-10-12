@@ -14,6 +14,15 @@ class SettingsViewController: UIViewController {
     
     /// A control button that enables to switch between two modes
     @IBOutlet weak var modeSwitch: UISwitch!
+    
+    @IBOutlet weak var button: UIBarButtonItem!
+    
+    let lightYellow = UIColor(red:0.95, green:0.89, blue:0.77, alpha:1.0)
+    let lightRose = UIColor(red:0.91, green:0.75, blue:0.84, alpha:1.0)
+    
+    let rose = UIColor(red:0.86, green:0.48, blue:0.65, alpha:1.0)
+    
+    let yellow = UIColor(red:0.77, green:0.71, blue:0.56, alpha:1.0)
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +32,15 @@ class SettingsViewController: UIViewController {
             if weWantGirlyMode {
                 switchToGirlyMode()
                 print("we like girlyMode")
-                viewSettings.backgroundColor = UIColor.systemPink
+                viewSettings.backgroundColor = lightRose
+                button.tintColor = rose
+                
 
             } else {
                 print("we like borringMode")
-                viewSettings.backgroundColor = UIColor.yellow
+                viewSettings.backgroundColor = lightYellow
+                button.tintColor = yellow
+
 
             }
     }
@@ -45,12 +58,16 @@ class SettingsViewController: UIViewController {
    
     func switchToGirlyMode() {
         print("switched to girlyMode preferences")
-        viewSettings.backgroundColor = UIColor.systemPink
+        viewSettings.backgroundColor = lightRose
+        button.tintColor = rose
+
     }
     
     func switchToBorringMode() {
         print("switched to borringMode preferences")
-        viewSettings.backgroundColor = UIColor.yellow
+        viewSettings.backgroundColor = lightYellow
+        button.tintColor = yellow
+
 
     }
 

@@ -21,16 +21,15 @@ class ShoppingListViewController: UIViewController, UITableViewDataSource {
 
     var fetchedResultsController:NSFetchedResultsController<Shoppinglist>!
     
+    let lightYellow = UIColor(red:0.95, green:0.89, blue:0.77, alpha:1.0)
+    let lightRose = UIColor(red:0.91, green:0.75, blue:0.84, alpha:1.0)
+    
     fileprivate func setupFetchedResultsController() {
         let fetchRequest:NSFetchRequest<Shoppinglist> = Shoppinglist.fetchRequest()
      
         let sortDescriptor = NSSortDescriptor(key: "creationDate", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptor]
-        
-        print("test", dataController.viewContext)
-        
-       // print("TEST22", fetchedResultsController!.fetchedObjects?.count)
-        
+                
         fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: dataController.viewContext, sectionNameKeyPath: nil, cacheName: "shoppinglists")
         
         fetchedResultsController.delegate = self
@@ -44,16 +43,6 @@ class ShoppingListViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupFetchedResultsController()
-        
-        let weWantGirlyMode = UserDefaults.standard.bool(forKey: "girlyModeThemeOn")
-        
-            if weWantGirlyMode {
-                navBar.barTintColor = UIColor.systemPink
-                toolBar.barTintColor = UIColor.systemPink
-            } else {
-                navBar.barTintColor = UIColor.yellow
-                toolBar.barTintColor = UIColor.yellow
-            }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -133,9 +122,7 @@ class ShoppingListViewController: UIViewController, UITableViewDataSource {
         if let itemsListViewController = segue.destination as? ItemsListViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 itemsListViewController.shoppinglist = fetchedResultsController.object(at: indexPath)
-                
-                print("VCSHOPPINGLIST", itemsListViewController.shoppinglist)
-                
+                                
                 itemsListViewController.dataController = dataController
             }
         }
@@ -185,6 +172,8 @@ extension ShoppingListViewController:NSFetchedResultsControllerDelegate {
             tableView.reloadRows(at: [indexPath!], with: .fade)
         case .move:
             tableView.moveRow(at: indexPath!, to: newIndexPath!)
+        @unknown default:
+            fatalError()
         }
     }
     
@@ -195,6 +184,8 @@ extension ShoppingListViewController:NSFetchedResultsControllerDelegate {
         case .delete: tableView.deleteSections(indexSet, with: .fade)
         case .update, .move:
             fatalError("Invalid change type in controller(_:didChange:atSectionIndex:for:). Only .insert or .delete should be possible.")
+        @unknown default:
+            fatalError()
         }
     }
 
