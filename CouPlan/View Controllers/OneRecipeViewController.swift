@@ -21,7 +21,7 @@ class OneRecipeViewController: UIViewController {
 
 let headers = [
     "x-rapidapi-host": "instagram47.p.rapidapi.com",
-    "x-rapidapi-key": "7ed6992754mshb85748fb70b9e62p1d64ecjsn02e38bbdbdef"
+    "x-rapidapi-key": "HEEERE"
 ]
 
 let request = NSMutableURLRequest(url: NSURL(string: "https://instagram47.p.rapidapi.com/public_user_posts?userid=1718924098")! as URL,
