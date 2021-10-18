@@ -5,13 +5,11 @@
 //  Created by Alexandra Hufnagel on 08.10.21.
 //
 
-/*import UIKit
+import UIKit
 import CoreData
 
 class RecipesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, NSFetchedResultsControllerDelegate {
-    
-    
-    
+
     /// A collection view that displays a collection of recipes from Instagram
     @IBOutlet weak var collectionView: UICollectionView!
     /// The layout for the collection view
@@ -43,6 +41,7 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
         
         // MARK: Float layout of the collection view
       //  let space:CGFloat = 3.0
@@ -64,7 +63,7 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
      //   showRecipes()
     
        // Client.requestRecipesList(completionHandler: handleRecipesListResponse(recipes:error:))
-    }
+   // }
     
    /* func showRecipes() {
         fetchRecipeFromDataController()
@@ -102,7 +101,7 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
 
     
     // MARK: Cell for item at index path
-   /* func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipesCell", for: indexPath) as! RecipesCell
       //  let recipeObject = fetchedResultsController.object(at: indexPath)
@@ -119,38 +118,38 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
         }*/
 
         return cell
-    }*/
+    }
     
     func handleRandomImageResponse(imageData: RecipeImage?, error: Error?) {
         guard let imageURL = URL(string: imageData?.message ?? "") else {
             return
         }
-        API.requestImageFile(url: imageURL, completionHandler: self.handleImageFileResponse(image:error:))
+      //  API.requestImageFile(url: imageURL, completionHandler: self.handleImageFileResponse(image:error:))
     }
     
     func handleImageFileResponse(image: UIImage?, error: Error?) {
         DispatchQueue.main.async {
-            self.imageView.image = image
+          //  self.imageView.image = image
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+   /* func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       //  DispatchQueue.main.async {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipesCell", for: indexPath) as! RecipesCell
         
         // Set the photo
         
-        handleRandomImageResponse()
+       // handleRandomImageResponse()
             
-            cell.recipeImageView.image = recipe
+          //  cell.recipeImageView.image = recipe
 
-        }
+        
             //self.imageView.image = image
         
         return cell
         //}
-    }
+    }*/
     
     // MARK: Items in section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -166,5 +165,15 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
     }*/
     
+    // MARK: Show details of one Recipe
+     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath:IndexPath) {
+        
+    //    let detailController = self.storyboard!.instantiateViewController(withIdentifier: "OneRecipeViewController") as! OneRecipeViewController
+      //  detailController.recipe = self.recipes[(indexPath as NSIndexPath).row]
+      //  navigationController!.pushViewController(detailController, animated: true)
+         performSegue(withIdentifier: "showRecipeDetails", sender: (Any).self)
+
+     }
     
-}*/
+    
+}
