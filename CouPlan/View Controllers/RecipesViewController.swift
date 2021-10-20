@@ -12,17 +12,17 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
 
     /// A collection view that displays a collection of recipes from Instagram
     @IBOutlet weak var collectionView: UICollectionView!
-    /// The layout for the collection view
-    @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
     //var dataController: DataController! = (UIApplication.shared.delegate as! AppDelegate).dataController
-   // var dataController: DataController!
+    // MARK: Variables
+    /// The data controller is responsible for establishing a connection with data
+    var dataController: DataController!
     
- //   var fetchedResultsController: NSFetchedResultsController<Recipe>!
+    var fetchedResultsController: NSFetchedResultsController<Recipe>!
     
-    var recipes: [Recipe]?
+    var recipe: Recipe!
         
- /*   fileprivate func setupFetchedResultsController() {
+    fileprivate func setupFetchedResultsController() {
         let fetchRequest:NSFetchRequest<Recipe> = Recipe.fetchRequest()
         
         let sortDescriptor = NSSortDescriptor(key: "url", ascending: false)
@@ -35,13 +35,51 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
         } catch {
             fatalError("The fetch could not be performed: \(error.localizedDescription)")
         }
-    }*/
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        downloadRecipes(completion: {
+            self.collectionView.reloadData()
+        })
+        
+        setupFetchedResultsController()
     }
+    
+    func downloadRecipes(completion: @escaping () -> Void) {
+        print("HEEEERE")
+     //   DispatchQueue.main.async {
+            print("HEEEERE2")
+            API.downloadRecipes() { data,error in
+                
+                print("DATA", data, data?.display_url)
+                
+                if (data?.display_url == nil) {
+                    self.showAlert(message: "")
+                }
+                
+                    let recipe = Recipe(context: self.dataController.viewContext)
+                    recipe.url = data!.display_url
+                    
+                    self.dataController.save()
+                
+                self.setupFetchedResultsController()
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
+       // }
+    }
+    
+    func showAlert(message: String) {
+        let alertVC = UIAlertController(title: "No Recipes", message: message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertVC, animated:true)
+    }
+    
         
         // MARK: Float layout of the collection view
       //  let space:CGFloat = 3.0
@@ -104,8 +142,11 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipesCell", for: indexPath) as! RecipesCell
-      //  let recipeObject = fetchedResultsController.object(at: indexPath)
-                
+        
+        print("fetchedResultController", fetchedResultsController)
+        let recipeObject = fetchedResultsController.object(at: indexPath)
+        print("recipeObject", recipeObject)
+
         // Set the recipe
       /*  API.taskForDownloadImage(url: URL(string: recipeObject.url!)!) { data, error in
             
@@ -116,14 +157,13 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
                 cell.recipeImageView.image = UIImage(data: recipeObject.recipe!)
             }
         }*/
-
         return cell
     }
     
     func handleRandomImageResponse(imageData: RecipeImage?, error: Error?) {
-        guard let imageURL = URL(string: imageData?.message ?? "") else {
+     /*   guard let imageURL = URL(string: imageData?.message ?? "") else {
             return
-        }
+        }*/
       //  API.requestImageFile(url: imageURL, completionHandler: self.handleImageFileResponse(image:error:))
     }
     

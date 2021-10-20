@@ -19,7 +19,7 @@ class RecipeDetailsViewController: UIViewController {
     
     let headers = [
         "x-rapidapi-host": "instagram47.p.rapidapi.com",
-        "x-rapidapi-key": "HEERE"
+        "x-rapidapi-key": ""
     ]
     
     let request = NSMutableURLRequest(url: NSURL(string: "https://instagram47.p.rapidapi.com/public_user_posts?userid=17632768")! as URL,
@@ -27,6 +27,10 @@ class RecipeDetailsViewController: UIViewController {
                                       timeoutInterval: 10.0)
     
     func handle() {
+        
+      //  let api = API()
+        
+    //    api.taskForGETRequest()
         
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
@@ -139,45 +143,6 @@ class RecipeDetailsViewController: UIViewController {
 //print("TESTD", downloadedImage)
 
 
-// // // response object /////////////////////
-/*   let dataTask = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
- if (error != nil) {
- print(error)
- } else {
- let httpResponse = response as? HTTPURLResponse
- // print("RESPONSE", httpResponse)
- }
- 
- guard let data = data else {
- print("no data, or there was an error")
- return
- }
- 
- let decoder = JSONDecoder()
- let imageData = try! decoder.decode(RecipesListResponse.self, from: data)
- 
- /*do {
-  let imageData = try decoder.decode(RecipeResponse.self, from: data)
-  print(imageData)
-  
-  } catch {
-  print("NICE")
-  }*/
- 
- 
- let downloadedImage = UIImage(data: data)
- 
- self.imageView.image = downloadedImage
- 
- print("TESTDA", data.first)
- 
- print("TESTD", downloadedImage)
- 
- })
- 
- dataTask.resume()
- 
- }
- }*/
+
 
 
