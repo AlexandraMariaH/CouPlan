@@ -53,9 +53,14 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
         print("HEEEERE")
      //   DispatchQueue.main.async {
             print("HEEEERE2")
-            API.downloadRecipes() { data,error in
+            //API.downloadRecipes() { data,error in
+        
+        API.downloadRecipes() { recipes,error in
+            
+            print("HERE16", recipes?.photo_url)
+
                 
-                print("DATA", data, data?.display_url)
+             /*   print("DATA", data, data?.display_url)
                 
                 if (data?.display_url == nil) {
                     self.showAlert(message: "")
@@ -69,7 +74,7 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
                 self.setupFetchedResultsController()
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
-                }
+                }*/
             }
        // }
     }

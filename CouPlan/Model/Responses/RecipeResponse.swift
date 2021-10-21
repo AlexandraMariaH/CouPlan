@@ -8,7 +8,21 @@
 import Foundation
 
 struct RecipeResponse: Decodable {
-    let body: Body
+    let recipes: Recipes
+}
+
+struct Recipes: Decodable {
+    let photo_url: String
+}
+
+extension RecipeResponse: LocalizedError {
+    var errorDescription: String? {
+        return " "
+    }
+}
+
+
+/*    let body: Body
     let statusCode: Int
     let status: String
     
@@ -75,3 +89,4 @@ extension RecipeResponse: LocalizedError {
         return "Error"
     }
 }
+*/

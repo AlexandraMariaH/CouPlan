@@ -9,12 +9,97 @@ import Foundation
 
 class API {
     
-    let headers = [
+    @discardableResult class func taskForGETRequest<ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, completion: @escaping (ResponseType?, Error?) -> Void) -> URLSessionDataTask {
+        
+        print("HERE18")
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "https://instagram47.p.rapidapi.com/public_user_posts?userid=17632768")! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 10.0)
+        
+        let headers = [
+            "x-rapidapi-host": "instagram47.p.rapidapi.com",
+            "x-rapidapi-key": ""
+        ]
+        
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = headers
+        
+        let task =  URLSession.shared.dataTask(with: request as URLRequest)  { data, response, error in
+            
+            print("HERE20")
+            
+            do {
+            
+                print("HERE19")
+                
+                guard let data = data else {
+                    DispatchQueue.main.async {
+                        completion(nil, error)
+                    }
+                    return
+                }
+                
+                do {
+                    let responseObject = try JSONDecoder().decode(ResponseType.self, from: data)
+                    DispatchQueue.main.async {
+                        completion(responseObject, nil)
+                    }
+                } catch {
+                    do {
+                        let errorResponse = try JSONDecoder().decode(RecipeResponse.self, from: data) as Error
+                        DispatchQueue.main.async {
+                            completion(nil, errorResponse)
+                        }
+                    } catch {
+                        DispatchQueue.main.async {
+                            completion(nil, error)
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+        print("HERE21")
+            task.resume()
+            
+            return task
+    }
+    
+        class func downloadRecipes(completion:@escaping (Recipes?, Error?) -> Void) {
+        
+            print("HERE17")
+            
+            taskForGETRequest(url: URL(string: "https://instagram47.p.rapidapi.com/public_user_posts?userid=17632768")!, responseType: RecipeResponse.self){
+            (response,error) in
+            
+            if let response = response {
+                DispatchQueue.main.async {
+                    completion(response.recipes, nil)
+                }
+            } else {
+                DispatchQueue.main.async {
+                    completion(response?.recipes, error)
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+}
+    
+    
+    /*
+    
+   /* let headers = [
         "x-rapidapi-host": "instagram47.p.rapidapi.com",
         "x-rapidapi-key": ""
-    ]
+    ]*/
     
-    enum Endpoints {
+   /* enum Endpoints {
         static let base = "https://instagram47.p.rapidapi.com"
         
         case getLatestRecipe
@@ -30,7 +115,7 @@ class API {
         var url: URL {
             return URL(string: stringValue)!
         }
-    }
+    }*/
     
   /*  class func taskForDownloadImage(url: URL, completion: @escaping (Data?, Error?) -> Void) {
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
@@ -42,11 +127,11 @@ class API {
         task.resume()
     }*/
     
-     func downloadRecipes(completion:@escaping (Node?, Error?) -> Void) {
+     class func downloadRecipes(completion:@escaping (Node?, Error?) -> Void) {
         
         print("HEEEERE3")
          
-         print("lala", Endpoints.getLatestRecipe.url)
+     //    print("lala", Endpoints.getLatestRecipe.url)
          print("lili", Edges.self)
         
         taskForGETRequest(url: Endpoints.getLatestRecipe.url, responseType: Edges.self){
@@ -66,14 +151,22 @@ class API {
         }
     }
     
-     func taskForGETRequest<ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, completion: @escaping (ResponseType?, Error?) -> Void) -> URLSessionDataTask {
+     class func taskForGETRequest<ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, completion: @escaping (ResponseType?, Error?) -> Void) -> URLSessionDataTask {
         
         print("HEEEERE9", url)
         
         let request = NSMutableURLRequest(url: url, cachePolicy:.useProtocolCachePolicy,timeoutInterval: 10.0)
         
+         let headers = [
+             "x-rapidapi-host": "instagram47.p.rapidapi.com",
+             "x-rapidapi-key": ""
+         ]
+         
         //request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
+         
+         print("HEEEERE9.5", request.url)
+
         
         let task = URLSession.shared.dataTask(with: request as URLRequest) { data, response, error in
             
@@ -182,4 +275,4 @@ class API {
         task.resume()
     }*/
     
-}
+}*/
