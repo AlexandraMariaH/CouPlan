@@ -17,26 +17,25 @@ class RecipeDetailsViewController: UIViewController {
         handle()
     }
     
-  /*  let headers = [
+    let headers = [
         "x-rapidapi-host": "instagram47.p.rapidapi.com",
         "x-rapidapi-key": ""
-    ]*/
+    ]
     
-   /* let request = NSMutableURLRequest(url: NSURL(string: "https://instagram47.p.rapidapi.com/public_user_posts?userid=17632768")! as URL,
+    let request = NSMutableURLRequest(url: NSURL(string: "https://instagram47.p.rapidapi.com/public_user_posts?userid=17632768")! as URL,
                                       cachePolicy: .useProtocolCachePolicy,
-                                      timeoutInterval: 10.0)*/
+                                      timeoutInterval: 10.0)
     
-    func handle() {}
-}
+    func handle() {
         
       //  let api = API()
         
      //   API.downloadPhotos(completion: <#T##<<error type>>#>)
         
-      //  request.httpMethod = "GET"
-     //   request.allHTTPHeaderFields = headers
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = headers
         
-      /*  let task =  URLSession.shared.dataTask(with: request as URLRequest)  { (data, response, error) in
+        let task =  URLSession.shared.dataTask(with: request as URLRequest)  { (data, response, error) in
             do {
                 
                 if let jsonData = data {
@@ -146,4 +145,4 @@ class RecipeDetailsViewController: UIViewController {
 
 
 
-*/
+

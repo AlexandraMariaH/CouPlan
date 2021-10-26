@@ -366,6 +366,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Kgz-8c-U1g" id="oav-qe-cAe"/>
+                        <outlet property="collectionViewFlowLayout" destination="UHx-iJ-wUg" id="a7c-Cb-kGy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EkO-7c-eTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
