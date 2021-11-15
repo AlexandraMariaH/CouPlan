@@ -11,10 +11,18 @@ import UIKit
 class RecipeDetailsViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    var recipe: Recipe!
+
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        handle()
+       // handle()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+//        imageView!.image = UIImage(named: recipe.url)
+
     }
     
     let headers = [
@@ -26,13 +34,18 @@ class RecipeDetailsViewController: UIViewController {
                                       cachePolicy: .useProtocolCachePolicy,
                                       timeoutInterval: 10.0)
     
-    func handle() {
+   // func handle() {
+        
+        
+        
+      //  self.imageView.image = downloadedImage
+
         
       //  let api = API()
         
      //   API.downloadPhotos(completion: <#T##<<error type>>#>)
         
-        request.httpMethod = "GET"
+    /*   request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
         
         let task =  URLSession.shared.dataTask(with: request as URLRequest)  { (data, response, error) in
@@ -99,7 +112,7 @@ class RecipeDetailsViewController: UIViewController {
         }
         
         task.resume()
-    }
+    }*/
 }
 
 

@@ -29,5 +29,21 @@ extension RecipeResponse: LocalizedError {
     var errorDescription: String? {
         return "Error"
     }
+    
 }
+
+/*extension RecipeResponse {
+    
+    // Generate an array full of all of the recipes in
+    static var allRecipes: [RecipeResponse] {
+        
+        var recipeArray = [RecipeResponse]()
+        
+        for d in RecipeResponse. {
+            recipeArray.append(Recipe(dictionary: d))
+        }
+        
+        return recipeArray
+    }
+}*/
 

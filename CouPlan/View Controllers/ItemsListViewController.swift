@@ -15,6 +15,7 @@ class ItemsListViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var toolBar: UIToolbar!
+    
     /// The shoppinglist whose items are being displayed
     var shoppinglist: Shoppinglist!
     
@@ -34,6 +35,7 @@ class ItemsListViewController: UIViewController, UITableViewDataSource {
 
         do {
             try fetchedResultsController.performFetch()
+          
         } catch {
             fatalError("The fetch could not be performed: \(error.localizedDescription)")
         }
@@ -41,11 +43,8 @@ class ItemsListViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.title = shoppinglist.name
-        
+        navBar.topItem?.title = shoppinglist.name
         setupFetchedResultsController()
-        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -81,7 +80,7 @@ class ItemsListViewController: UIViewController, UITableViewDataSource {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let saveAction = UIAlertAction(title: "Save", style: .default) { [weak self] action in
             if let name = alert.textFields?.first?.text {
-                self?.addItem(name: name)
+                self?.addItem(name: NSMutableAttributedString(string: name))
             }
         }
         saveAction.isEnabled = false
@@ -104,11 +103,11 @@ class ItemsListViewController: UIViewController, UITableViewDataSource {
     }
 
     // Adds a new `Item` to the end of the `shoppinglist`'s `Items` array
-    func addItem(name: String) {
+    func addItem(name: NSAttributedString) {
         let item = Item(context: dataController.viewContext)
         item.creationDate = Date()
         item.shoppinglist = shoppinglist
-        item.name = name
+        item.attributedText = name
         try? dataController.viewContext.save()
     }
 
@@ -124,20 +123,17 @@ class ItemsListViewController: UIViewController, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let anItem = fetchedResultsController.object(at: indexPath)
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: ItemCell.defaultReuseIdentifier, for: indexPath) as! ItemCell
 
         // Configure cell
-        cell.textPreviewLabel.text = anItem.name
-            
+        cell.textPreviewLabel.attributedText = anItem.attributedText
+                    
         return cell
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return fetchedResultsController.sections?.count ?? 3
-    }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fetchedResultsController.sections?[section].numberOfObjects ?? 0
+        return fetchedResultsController.sections?[0].numberOfObjects ?? 0
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -146,7 +142,6 @@ class ItemsListViewController: UIViewController, UITableViewDataSource {
         default: () // Unsupported
         }
     }
-
 
 }
 

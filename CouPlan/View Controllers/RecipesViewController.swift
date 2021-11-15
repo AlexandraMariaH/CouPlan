@@ -22,6 +22,9 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
     var fetchedResultsController: NSFetchedResultsController<Recipe>!
     var recipe: Recipe!
     
+   // let allRecipes = RecipeResponse.allRecipes
+
+    
     fileprivate func setupFetchedResultsController() {
         dataController = (UIApplication.shared.delegate as! AppDelegate).dataController
         
@@ -67,15 +70,15 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
             /*  if (data == nil) {
              self.showAlert(message: "")
              }*/
-            print("DATAA", data)
-            for recipe in recipe? {
+        //    print("DATAA", data)
+         //   for recipe in recipe? {
 
             let photoURL = API.getPhotoURL()
             let recipe = Recipe(context: self.dataController.viewContext)
             recipe.url = photoURL
             
             self.dataController.save()
-            }
+          //  }
             
             self.setupFetchedResultsController()
             
@@ -103,7 +106,7 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         API.requestImageFile(url: URL(string: recipeObject.url!)!) { data, error in
             
-         //   print("URLL", recipeObject.url)
+            print("URLL", recipeObject.url)
             
             recipeObject.recipe = data
             
@@ -111,7 +114,9 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
             DispatchQueue.main.async {
                 cell.recipeImageView.image = UIImage(data: recipeObject.recipe!)
                 
-                print("CELL", recipeObject.recipe)
+                print("CELL", recipeObject.recipe?.first)
+                print("CELL2", cell.recipeImageView.image)
+
             }
         }
         return cell
@@ -126,5 +131,13 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath:IndexPath) {
         performSegue(withIdentifier: "showRecipeDetails", sender: (Any).self)
     }
+    
+   /* func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath:IndexPath) {
+        
+        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "RecipeDetailViewController") as! RecipeDetailsViewController
+        detailController.recipe = self.allRecipes[(indexPath as NSIndexPath).row]
+        self.navigationController!.pushViewController(detailController, animated: true)
+        
+    }*/
     
 }

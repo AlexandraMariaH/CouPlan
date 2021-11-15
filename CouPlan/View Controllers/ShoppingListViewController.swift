@@ -9,6 +9,8 @@ import UIKit
 import CoreData
 
 class ShoppingListViewController: UIViewController, UITableViewDataSource {
+    
+    /// A table view that displays a list of shoppinglists
     @IBOutlet weak var back: UIBarButtonItem!
     
     @IBOutlet weak var navBar: UINavigationBar!
@@ -20,9 +22,6 @@ class ShoppingListViewController: UIViewController, UITableViewDataSource {
     var dataController: DataController! = (UIApplication.shared.delegate as! AppDelegate).dataController
 
     var fetchedResultsController:NSFetchedResultsController<Shoppinglist>!
-    
-    let lightYellow = UIColor(red:0.95, green:0.89, blue:0.77, alpha:1.0)
-    let lightRose = UIColor(red:0.91, green:0.75, blue:0.84, alpha:1.0)
     
     fileprivate func setupFetchedResultsController() {
         let fetchRequest:NSFetchRequest<Shoppinglist> = Shoppinglist.fetchRequest()
@@ -139,10 +138,6 @@ class ShoppingListViewController: UIViewController, UITableViewDataSource {
         cell.nameLabel.text = aShoppinglist.name
             
         return cell
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return fetchedResultsController.sections?.count ?? 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

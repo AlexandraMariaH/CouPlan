@@ -78,7 +78,7 @@ class API {
         let task = URLSession.shared.dataTask(with: url, completionHandler: {
             (data, response, error) in
             
-            print("URLL2", url, data, response?.url)
+         //   print("URLL2", url, data, response?.url)
             
             guard let data = data else {
                 completionHandler(nil, error)
