@@ -7,14 +7,17 @@
 
 import UIKit
 import CoreData
+import Foundation
 
-class ItemsListViewController: UIViewController, UITableViewDataSource {
+class ItemsListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     /// A table view that displays a list of items for a shoppinglist
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var toolBar: UIToolbar!
+    
+    var rowsWhichAreChecked = [NSIndexPath]()
     
     /// The shoppinglist whose items are being displayed
     var shoppinglist: Shoppinglist!
@@ -43,6 +46,7 @@ class ItemsListViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.allowsMultipleSelection = true
         navBar.topItem?.title = shoppinglist.name
         setupFetchedResultsController()
     }
@@ -128,7 +132,15 @@ class ItemsListViewController: UIViewController, UITableViewDataSource {
 
         // Configure cell
         cell.textPreviewLabel.attributedText = anItem.attributedText
-                    
+        
+        let isRowChecked = rowsWhichAreChecked.contains(indexPath as NSIndexPath)
+        if (isRowChecked == true) {
+            cell.checkBoxButton.isChecked = true
+            cell.checkBoxButton.buttonClicked(sender: cell.checkBoxButton)
+        } else {
+            cell.checkBoxButton.isChecked = false
+            cell.checkBoxButton.buttonClicked(sender: cell.checkBoxButton)
+        }
         return cell
     }
     
@@ -136,10 +148,32 @@ class ItemsListViewController: UIViewController, UITableViewDataSource {
         return fetchedResultsController.sections?[0].numberOfObjects ?? 0
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50.00
+    }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         switch editingStyle {
         case .delete: deleteItem(at: indexPath)
         default: () // Unsupported
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let itemCell = tableView.cellForRow(at: indexPath as IndexPath) as! ItemCell
+        itemCell.contentView.backgroundColor = UIColor.white
+        if (rowsWhichAreChecked.contains(indexPath as NSIndexPath) == false){
+            itemCell.checkBoxButton.isChecked = true
+            itemCell.checkBoxButton.buttonClicked(sender: itemCell.checkBoxButton)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let itemCell = tableView.cellForRow(at: indexPath as IndexPath) as! ItemCell
+        itemCell.checkBoxButton.isChecked = false
+        itemCell.checkBoxButton.buttonClicked(sender: itemCell.checkBoxButton)
+        if let checkedItemIndex = rowsWhichAreChecked.firstIndex(of: indexPath as NSIndexPath){
+            rowsWhichAreChecked.remove(at: checkedItemIndex)
         }
     }
 

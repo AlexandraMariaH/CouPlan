@@ -26,6 +26,7 @@
 		E03AF2952701BC4300DB88AE /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03AF2942701BC4300DB88AE /* Cell.swift */; };
 		E03AF2972701BC7E00DB88AE /* ShoppinglistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03AF2962701BC7E00DB88AE /* ShoppinglistCell.swift */; };
 		E03AF2992701BC8A00DB88AE /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03AF2982701BC8A00DB88AE /* ItemCell.swift */; };
+		E046B4212742C0AA0065D47B /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E046B4202742C0AA0065D47B /* CheckBoxButton.swift */; };
 		E06F187F270A40E900008CF9 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06F187E270A40E900008CF9 /* TextField.swift */; };
 		E06F1882270B32DB00008CF9 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06F1881270B32DB00008CF9 /* Button.swift */; };
 		E06F1884270CBF4E00008CF9 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06F1883270CBF4E00008CF9 /* NavBar.swift */; };
@@ -89,6 +90,7 @@
 		E03AF2942701BC4300DB88AE /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		E03AF2962701BC7E00DB88AE /* ShoppinglistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppinglistCell.swift; sourceTree = "<group>"; };
 		E03AF2982701BC8A00DB88AE /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		E046B4202742C0AA0065D47B /* CheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
 		E06F187E270A40E900008CF9 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		E06F1881270B32DB00008CF9 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		E06F1883270CBF4E00008CF9 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				E06F1885270CC0F700008CF9 /* Background.swift */,
 				E06F1887270CC2DA00008CF9 /* BarButton.swift */,
 				E06F1889270E307400008CF9 /* ToolBar.swift */,
+				E046B4202742C0AA0065D47B /* CheckBoxButton.swift */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				E0FA871927075332003BC154 /* LoginViewController.swift in Sources */,
 				E01899AE2701F80A00029DBA /* Item+Extensions.swift in Sources */,
 				E0B8C6C627010F2A00A35C43 /* CouPlan.xcdatamodeld in Sources */,
+				E046B4212742C0AA0065D47B /* CheckBoxButton.swift in Sources */,
 				E01899B42701FA6E00029DBA /* Pathifier.swift in Sources */,
 				E0D0EFFD271499E1000DFF50 /* RecipeDetailsViewController.swift in Sources */,
 				E06F1886270CC0F700008CF9 /* Background.swift in Sources */,
