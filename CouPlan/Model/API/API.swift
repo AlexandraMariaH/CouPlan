@@ -18,7 +18,7 @@ class API {
         
         let headers = [
             "x-rapidapi-host": "instagram47.p.rapidapi.com",
-            "x-rapidapi-key": "7ed6992754mshb85748fb70b9e62p1d64ecjsn02e38bbdbdef"
+            "x-rapidapi-key": ""
         ]
         
         request.httpMethod = "GET"
