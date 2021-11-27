@@ -18,7 +18,7 @@ class API {
         
         let headers = [
             "x-rapidapi-host": "instagram47.p.rapidapi.com",
-            "x-rapidapi-key": ""
+            "x-rapidapi-key": "7ed6992754mshb85748fb70b9e62p1d64ecjsn02e38bbdbdef"
         ]
         
         request.httpMethod = "GET"
@@ -42,7 +42,7 @@ class API {
             let imageData = try! JSONDecoder().decode(RecipeResponse.self, from: data)
             print("IMAGEDATA", imageData)
             
-            completion(nil, error)
+            completion(imageData as! ResponseType, error)
             
         }
         
@@ -57,9 +57,14 @@ class API {
         taskForGETRequest(responseType: RecipeResponse.self){
             (response,error) in
             
+            print("RESPONSEbef", response)
+
+            
             if let response = response {
                 DispatchQueue.main.async {
                     completion(response, nil)
+                    
+                    print("RESPONSE", response)
                 }
             } else {
                 DispatchQueue.main.async {
@@ -78,7 +83,7 @@ class API {
         let task = URLSession.shared.dataTask(with: url, completionHandler: {
             (data, response, error) in
             
-         //   print("URLL2", url, data, response?.url)
+            print("URLL2", url, data, response?.url)
             
             guard let data = data else {
                 completionHandler(nil, error)

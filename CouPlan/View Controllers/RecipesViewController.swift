@@ -22,9 +22,6 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
     var fetchedResultsController: NSFetchedResultsController<Recipe>!
     var recipe: Recipe!
     
-   // let allRecipes = RecipeResponse.allRecipes
-
-    
     fileprivate func setupFetchedResultsController() {
         dataController = (UIApplication.shared.delegate as! AppDelegate).dataController
         
@@ -70,10 +67,15 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
             /*  if (data == nil) {
              self.showAlert(message: "")
              }*/
-        //    print("DATAA", data)
+       //     print("DATAA", data)
          //   for recipe in recipe? {
 
-            let photoURL = API.getPhotoURL()
+            print("PHOTOurl", API.getPhotoURL())
+            
+          //  let photoURL = API.getPhotoURL()
+            let photoURL = data?.body.edges.first?.node.display_url
+            
+            print("testURL", data?.body.edges.first?.node.display_url)
             let recipe = Recipe(context: self.dataController.viewContext)
             recipe.url = photoURL
             
@@ -100,13 +102,18 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipesCell", for: indexPath) as! RecipesCell
         
-      //  print("fetchedResultController", fetchedResultsController)
+        print("fetchedResultController", fetchedResultsController)
         let recipeObject = fetchedResultsController.object(at: indexPath)
-      //  print("recipeObject", recipeObject)
+        print("recipeObject", recipeObject)
+        print("recipeObjectUURL", recipeObject.url)
+
         
         API.requestImageFile(url: URL(string: recipeObject.url!)!) { data, error in
             
             print("URLL", recipeObject.url)
+            
+            print("CELLdata", data)
+
             
             recipeObject.recipe = data
             
@@ -115,6 +122,10 @@ class RecipesViewController: UIViewController, UICollectionViewDelegate, UIColle
                 cell.recipeImageView.image = UIImage(data: recipeObject.recipe!)
                 
                 print("CELL", recipeObject.recipe?.first)
+                print("CELL1", UIImage(data: recipeObject.recipe!))
+                print("CELL12", recipeObject.recipe)
+
+
                 print("CELL2", cell.recipeImageView.image)
 
             }

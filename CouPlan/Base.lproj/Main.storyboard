@@ -316,7 +316,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p0B-4m-M6z" customClass="NavBar" customModule="CouPlan" customModuleProvider="target">
-                                <rect key="frame" x="-2" y="0.0" width="415" height="44"/>
+                                <rect key="frame" x="-3" y="0.0" width="416" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Recipes" id="LPZ-be-pUx" userLabel="Recipes">
@@ -371,7 +371,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EkO-7c-eTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1006" y="1532"/>
+            <point key="canvasLocation" x="1005.7971014492755" y="1531.4732142857142"/>
         </scene>
         <!--ShoppingList View Controller-->
         <scene sceneID="Qf2-nr-iLt">
@@ -647,7 +647,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="BV3-Wk-tic"/>
         <segue reference="Btv-KB-Nbr"/>
-        <segue reference="AjU-ve-UCN"/>
+        <segue reference="VON-dk-Etz"/>
         <segue reference="oEN-NC-BcI"/>
     </inferredMetricsTieBreakers>
     <resources>
