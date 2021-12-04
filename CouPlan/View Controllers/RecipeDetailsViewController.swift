@@ -5,12 +5,16 @@
 //  Created by Alexandra Hufnagel on 11.10.21.
 //
 
-import Foundation
+/*import Foundation
 import UIKit
 
 class RecipeDetailsViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    // MARK: Variables
+    /// The data controller is responsible for establishing a connection with data
+    var dataController: DataController!
     
     var recipe: Recipe!
 
@@ -21,11 +25,12 @@ class RecipeDetailsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        imageView!.image = UIImage(named: recipe.url)
+        
+        imageView!.image = UIImage(named: recipe.url ?? "")
 
     }
     
-    let headers = [
+   /* let headers = [
         "x-rapidapi-host": "instagram47.p.rapidapi.com",
         "x-rapidapi-key": ""
     ]
@@ -33,7 +38,7 @@ class RecipeDetailsViewController: UIViewController {
     let request = NSMutableURLRequest(url: NSURL(string: "https://instagram47.p.rapidapi.com/public_user_posts?userid=17632768")! as URL,
                                       cachePolicy: .useProtocolCachePolicy,
                                       timeoutInterval: 10.0)
-    
+    */
    // func handle() {
         
         
@@ -159,3 +164,4 @@ class RecipeDetailsViewController: UIViewController {
 
 
 
+*/

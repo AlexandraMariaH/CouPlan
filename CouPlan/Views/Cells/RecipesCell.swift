@@ -11,4 +11,7 @@ class RecipesCell: UICollectionViewCell {
     
     // MARK: Outlet
     @IBOutlet weak var recipeImageView: UIImageView!
+    
+    
+    @IBOutlet weak var recipeLabel: UILabel!
 }

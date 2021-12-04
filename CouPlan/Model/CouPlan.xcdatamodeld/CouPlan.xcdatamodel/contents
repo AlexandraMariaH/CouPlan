@@ -6,6 +6,7 @@
         <relationship name="shoppinglist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Shoppinglist" inverseName="items" inverseEntity="Shoppinglist"/>
     </entity>
     <entity name="Recipe" representedClassName="Recipe" syncable="YES" codeGenerationType="class">
+        <attribute name="label" optional="YES" attributeType="String"/>
         <attribute name="recipe" optional="YES" attributeType="Binary"/>
         <attribute name="url" optional="YES" attributeType="String"/>
     </entity>
@@ -16,7 +17,7 @@
     </entity>
     <elements>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="74"/>
-        <element name="Recipe" positionX="-54" positionY="27" width="128" height="59"/>
+        <element name="Recipe" positionX="-54" positionY="27" width="128" height="74"/>
         <element name="Shoppinglist" positionX="-45" positionY="18" width="128" height="74"/>
     </elements>
 </model>
