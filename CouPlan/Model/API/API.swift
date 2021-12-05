@@ -152,6 +152,25 @@ class API {
         return urlString.absoluteString
     }
     
+    class func requestImage(url: URL, completionHandler: @escaping (UIImage?, Error?) -> Void) {
+        let task = URLSession.shared.dataTask(with: url, completionHandler: {
+            (data, response, error) in
+            
+            print("URLL2", url, data, response?.url)
+            
+            guard let data = data else {
+                completionHandler(nil, error)
+                return
+            }
+          //  completionHandler(data, nil)
+            
+            let imageFile = UIImage(data: data)
+            completionHandler(imageFile, nil)
+        })
+        task.resume()
+    }
+    
+    //for recipesviewController as setup
     class func requestImageFile(url: URL, completionHandler: @escaping (Data?, Error?) -> Void) {
         let task = URLSession.shared.dataTask(with: url, completionHandler: {
             (data, response, error) in
