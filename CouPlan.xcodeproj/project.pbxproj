@@ -38,6 +38,7 @@
 		E0B8C6C327010DC200A35C43 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B8C6C227010DC200A35C43 /* DataController.swift */; };
 		E0B8C6C627010F2A00A35C43 /* CouPlan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0B8C6C427010F2A00A35C43 /* CouPlan.xcdatamodeld */; };
 		E0D0EFFD271499E1000DFF50 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D0EFFC271499E1000DFF50 /* RecipeDetailsViewController.swift */; };
+		E0D3724E275FDD1000DA9320 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E0D3724D275FDD1000DA9320 /* README.md */; };
 		E0DB230C27108F3100A8F95B /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DB230B27108F3100A8F95B /* RecipesViewController.swift */; };
 		E0DB230E2710939900A8F95B /* RecipesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DB230D2710939900A8F95B /* RecipesCell.swift */; };
 		E0DB23102710EB3F00A8F95B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DB230F2710EB3F00A8F95B /* API.swift */; };
@@ -103,6 +104,7 @@
 		E0B8C6C227010DC200A35C43 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		E0B8C6C527010F2A00A35C43 /* CouPlan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CouPlan.xcdatamodel; sourceTree = "<group>"; };
 		E0D0EFFC271499E1000DFF50 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
+		E0D3724D275FDD1000DA9320 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		E0DB230B27108F3100A8F95B /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		E0DB230D2710939900A8F95B /* RecipesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesCell.swift; sourceTree = "<group>"; };
 		E0DB230F2710EB3F00A8F95B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				E004639F26F5E93300422560 /* Assets.xcassets */,
 				E00463A126F5E93300422560 /* LaunchScreen.storyboard */,
 				E00463A426F5E93300422560 /* Info.plist */,
+				E0D3724D275FDD1000DA9320 /* README.md */,
 			);
 			path = CouPlan;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 			files = (
 				E0FA871C2709DAC7003BC154 /* GoogleService-Info.plist in Resources */,
 				E00463A326F5E93300422560 /* LaunchScreen.storyboard in Resources */,
+				E0D3724E275FDD1000DA9320 /* README.md in Resources */,
 				E00463A026F5E93300422560 /* Assets.xcassets in Resources */,
 				E004639E26F5E93000422560 /* Main.storyboard in Resources */,
 			);

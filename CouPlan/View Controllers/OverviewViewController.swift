@@ -19,7 +19,7 @@ class OverviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        test()
+       // test()
     }
     
     // MARK: Segue with Code Approach
@@ -65,7 +65,7 @@ class OverviewViewController: UIViewController {
         
     }
     
-    func test() {
+ /*   func test() {
         
         
         let recipeLabeltest =
@@ -108,7 +108,7 @@ HEALTHIER THAI GREEN CURRY (vegan) // One of my dinners every week and a favouri
         
         print("RESULT2", recipeLabelFormatted, recipeInstructionsFormatted)
 
-    }
+    }*/
     
 }
 

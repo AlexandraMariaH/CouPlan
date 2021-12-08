@@ -11,7 +11,7 @@ import UIKit
 class API {
     
     struct API {
-        static let xRapidAPIKey = ""
+        static let xRapidAPIKey = "7ed6992754mshb85748fb70b9e62p1d64ecjsn02e38bbdbdef"
     }
     
     enum Endpoints {
