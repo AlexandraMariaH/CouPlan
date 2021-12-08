@@ -2,8 +2,6 @@
 
 # An App for couples to structure their everyday life with shopping lists and recipe inspos for breakfast
 
-![alt text](https://github.com/AlexandraMariaH/CouPlan/tree/main/screenshots/screenshot_loginscreen.png)
-
 # Implementation
 
 The main view controllers of the app:
