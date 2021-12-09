@@ -59,65 +59,33 @@ class API {
             do {
                 if let jsonDataDict  = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [String: AnyObject] {
                     NSLog("Received data:\n\(jsonDataDict))")
-                    print("DAAtadict1", jsonDataDict)
-
-                    print("DAAtadictfirst", jsonDataDict.first?.value)
-                 //   print("DAAtadictlast", jsonDataDict.keys?.value)
-
-                    print("DAAtadict", jsonDataDict.keys)
-                    print("DAAtadictv", jsonDataDict.values)
-                    print("DAAtadictv2", jsonDataDict.values.first)
-                    //print("DAATASUC", jsonDataDict.values["statusCode"])
-
-                    /*if (jsonDataDict.values.contains(Success) != true) {
-                        DispatchQueue.main.async {
-                        completion(nil, error)
-                        }
-                        return
-                    }*/
-                    
-                  /*  if jsonDataDict.values.first as! String != "Sucess"  {
-                       // task.resume()
-                        //return task
-                        
-                        DispatchQueue.main.async {
-                        completion(nil, error)
-                        }
-                        return
-                    }*/
+                    print("DAAtadi", jsonDataDict)
 
                 }
             
             }
             catch {}
-            
-            print("DATAAA", data.isEmpty)
-            
+                        
             do {
-            let imageData = try! JSONDecoder().decode(RecipeResponse.self, from: data)
-            print("IMAGEDATA", imageData)
+            let imageData = try JSONDecoder().decode(ResponseType.self, from: data)
                 
             DispatchQueue.main.async {
-            completion(imageData as! ResponseType, error)
+                completion(imageData, nil)
             }
             } catch {
-                DispatchQueue.main.async {
-                    completion(nil, error)
-                }
-            }
-            
-          /*  catch {
                 do {
                     let errorResponse = try JSONDecoder().decode(RecipeResponse.self, from: data) as Error
-                    DispatchQueue.main.async {
-                        completion(nil, errorResponse)
-                    }
-                } catch {
+                DispatchQueue.main.async {
+                    completion(nil, errorResponse)
+                }
+                    
+            }
+                catch {
                     DispatchQueue.main.async {
                         completion(nil, error)
                     }
                 }
-            }*/
+            }
             
         }
         

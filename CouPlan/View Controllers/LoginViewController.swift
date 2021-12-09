@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailField: TextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loginButton: UIButton!
     
     @IBOutlet weak var loginTextField: UITextField!
@@ -30,7 +31,7 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
         subscribeToKeyboardNotifications()
-
+        setLoggingIn(false)
         
         // MARK: User login check
         authHandle = Auth.auth().addStateDidChangeListener { _, user in
@@ -55,6 +56,9 @@ class LoginViewController: UIViewController {
     
     @IBAction func logginTapped(_ sender: Any) {
         
+        setLoggingIn(true)
+
+        
         guard let email = emailField.text, !email.isEmpty, let password = passwordField.text, !password.isEmpty else {
             showAlert(message: "Please enter your email address and your password")
             return
@@ -73,6 +77,7 @@ class LoginViewController: UIViewController {
                 self.performSegue(withIdentifier: "goToOverview", sender: (Any).self)
             }
         }
+        
         
      /*   Auth.auth().signIn(withEmail: email, password: password, completion: { (auth, error) in
             if let x = error {
@@ -201,6 +206,17 @@ class LoginViewController: UIViewController {
         }
 
     }*/
+    
+    func setLoggingIn(_ loggingIn: Bool) {
+        if loggingIn {
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicator.stopAnimating()
+        }
+        emailField.isEnabled = !loggingIn
+        passwordField.isEnabled = !loggingIn
+        loginButton.isEnabled = !loggingIn
+    }
         
     @IBAction func unwindToLogin(segue:UIStoryboardSegue) {}
     
