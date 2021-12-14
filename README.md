@@ -40,9 +40,15 @@ The features that are implemented so far:
 Xcode 13
 
 # Some insights: 
-ItemListScreen:
+
 <p align="left">
   <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_itemlist_screen.png" width="350" title="ItemListScreen">
+  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_loginscreen.png" width="350" title="LoginScreen">
+  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_overview_screen.png" width="350" title="OverviewScreen">
+  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_recipe_screen.png" width="350" title="RecipeScreen">
+  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_settings_screen.png" width="350" title="SettingsScreen">
+  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_shoppinglist_screen.png" width="350" title="ShoppingListScreen">
+   <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_sign_up_screen.png" width="350" title="SignUpScreen">
 </p>
 
 
