@@ -42,6 +42,8 @@ Xcode 13
 ![alt text](https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_itemlist_screen.png)
 
 
-
+<p align="center">
+  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_itemlist_screen.png" width="350" title="ItemListScreen">
+</p>
 
 
