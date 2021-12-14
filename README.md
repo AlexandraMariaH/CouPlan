@@ -39,6 +39,8 @@ The features that are implemented so far:
 
 Xcode 13
 
+![alt text](https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_itemlist_screen.png)
+
 
 
 
