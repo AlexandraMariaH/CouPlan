@@ -42,13 +42,13 @@ Xcode 13
 # Some insights: 
 
 <p align="left">
-  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_itemlist_screen.png" width="350" title="ItemListScreen">
-  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_loginscreen.png" width="350" title="LoginScreen">
-  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_overview_screen.png" width="350" title="OverviewScreen">
-  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_recipe_screen.png" width="350" title="RecipeScreen">
-  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_settings_screen.png" width="350" title="SettingsScreen">
-  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_shoppinglist_screen.png" width="350" title="ShoppingListScreen">
-   <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_sign_up_screen.png" width="350" title="SignUpScreen">
+  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_loginscreen.png" width="250" title="LoginScreen">
+  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_sign_up_screen.png" width="250" title="SignUpScreen">
+  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_overview_screen.png" width="250" title="OverviewScreen">
+  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_settings_screen.png" width="250" title="SettingsScreen">
+  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_shoppinglist_screen.png" width="250" title="ShoppingListScreen">
+  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_itemlist_screen.png" width="250" title="ItemListScreen">
+  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_recipe_screen.png" width="250" title="RecipeScreen">
 </p>
 
 
