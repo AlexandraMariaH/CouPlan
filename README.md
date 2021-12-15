@@ -42,6 +42,7 @@ Xcode 13
 # Some insights: 
 
 <p align="left">
+  <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_launch_screen.png" width="250" title="LaunchScreen">
   <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_loginscreen.png" width="250" title="LoginScreen">
   <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_sign_up_screen.png" width="250" title="SignUpScreen">
   <img src="https://github.com/AlexandraMariaH/CouPlan/blob/main/screenshots/screenshot_overview_screen.png" width="250" title="OverviewScreen">
