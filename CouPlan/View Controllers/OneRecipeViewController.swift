@@ -110,7 +110,7 @@ class OneRecipeViewController: UIViewController, NSFetchedResultsControllerDeleg
                     
         var upperCaseWords: Array<String> = []
         for word in recipeLabelSeperated {
-            if word == word.uppercased() && word.count > 1 && word != word.lowercased() {
+            if word == word.uppercased() && word.count > 1 && word != word.lowercased() && word != "MEERA5" {
                 upperCaseWords.append(word)
             }
         }
@@ -150,19 +150,13 @@ class OneRecipeViewController: UIViewController, NSFetchedResultsControllerDeleg
         recipeInstructions.isHidden = waiting
     }
     
-  /*  func showAlert(message: String) {
-        print("teeeeeest")
-        let alertVC = UIAlertController(title: "No Recipes", message: message, preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alertVC, animated:true)
-    }*/
-    
     func showMessage(message: String) {
+        recipeLabel.isHidden = true
+        recipeInstructions.isHidden = true
         let alertVC = UIAlertController(title: "No Recipes", message: message, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: {
             action in
             DispatchQueue.main.async {
-               // self.performSegue(withIdentifier: "unwindToLogin", sender: (Any).self)
                 self.dismissVC((Any).self)
             }
         }))

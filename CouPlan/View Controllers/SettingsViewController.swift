@@ -34,14 +34,10 @@ class SettingsViewController: UIViewController {
                 print("we like girlyMode")
                 viewSettings.backgroundColor = lightRose
                 button.tintColor = rose
-                
-
             } else {
                 print("we like borringMode")
                 viewSettings.backgroundColor = lightYellow
                 button.tintColor = yellow
-
-
             }
     }
     
@@ -60,15 +56,12 @@ class SettingsViewController: UIViewController {
         print("switched to girlyMode preferences")
         viewSettings.backgroundColor = lightRose
         button.tintColor = rose
-
     }
     
     func switchToBorringMode() {
         print("switched to borringMode preferences")
         viewSettings.backgroundColor = lightYellow
         button.tintColor = yellow
-
-
     }
 
 
